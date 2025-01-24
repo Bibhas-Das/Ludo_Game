@@ -1,0 +1,188 @@
+/* 
+     This is a web ludo game
+     made of html, css, and js and jquery
+     Programmer name : Bibhas Das
+     Email: bibhasdas1205@gmail.com
+     Start Date : 14/01/2024
+     Edited	: 15/01/2024
+     Edited	: 16/01/2024
+     Edited	: 17/01/2024
+     Edited	: 18/01/2024
+     Edited	: 21/01/2024
+     Last Edited: 22/01/2024
+     End Date 	: Still developing...
+*/
+
+body{
+background-color:black;
+}
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing:border-box;
+}
+
+.game {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background-color:white;
+    margin-left:auto;
+    margin-right:auto;
+}
+.green {
+    background-color: #66bb6a;
+}
+.red {
+    background-color: #e53935;
+    border: none;
+}
+.yellow {
+    background-color: #bfac0a;/*#fff176;*/
+    border: none;
+}
+.blue {
+    background-color: #29b6f6;
+    border: none;
+}
+
+.house {
+    display: inline-block;
+    position: absolute;
+    width:40%;
+    height:40%;
+    padding:7%;
+}
+.box {
+    position: relative;
+    width:100%;
+    height:100%;
+    background-color:white;
+    padding:20%;
+}
+.square {
+    position: absolute;
+    width:25%;
+    height:25%;
+
+}
+.square-one {
+    top:20%;
+    left:20%;
+}
+.square-two {
+    top: 20%;
+    right: 20%;
+}
+.square-three {
+    bottom: 20%;
+    left: 20%;
+}
+.square-four {
+    bottom: 20%;
+    right: 20%;
+}
+.home {
+    position: absolute;
+    top:40%;
+    left: 40%;
+    width: 20%;
+    height: 20%;
+    border-bottom: 20px solid #e53935;
+    border-top: 20px solid #bfac0a;/*#fff176;*/
+    border-left: 20px solid #66bb6a;
+    border-right: 20px solid #29b6f6;
+}
+.cells {
+    position: absolute;
+    width: 6.66% ;
+    height: 6.66%;
+    border-collapse: collapse;
+    border: 1px solid #000 ;
+}
+
+.safe {
+    background-color: lightpink;
+    -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.g-start {
+    background-color: #66bb6a;
+}
+.y-start {
+    background-color: #bfac0a;/*#fff176;*/
+}
+.r-start {
+    background-color: #e53935;
+}
+.b-start {
+    background-color: #29b6f6;
+}
+.gdice{
+	margin-top:25%;
+	padding:20px;
+	width:200px;
+	height:200px;
+	float:left;
+}
+.ydice{
+	margin-top:25%;
+	padding:20px;
+	width:200px;
+	height:200px;
+	float:right;
+}
+.rdice{
+	padding:20px;
+	width:200px;
+	height:200px;
+	float:left;
+}
+
+.bdice{
+	padding:20px;
+	width:200px;
+	height:200px;
+	float:right;
+}
+img{
+	width:100%;
+	height:100%;
+	display:inherit;
+}
+.main{
+	display:none;
+}
+
+.logo{
+	border:1px solid white;
+	width:500px;
+	height:470px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:60%;
+	padding:15px;
+	border-radius:20px;
+}
+.logo h1, center{
+	text-align:center;
+	color:orange;
+	margin:20px;
+}
+.logo img {
+	border-radius:20px;
+	width:470px;
+	height:350px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.celebration{
+	position:fixed;
+	top:0;
+	z-index:10;
+}
